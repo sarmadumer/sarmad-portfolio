@@ -1,95 +1,106 @@
-body {
+/* General Styles */
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  scroll-behavior: smooth;
-  background-color: #f4f4f4;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
   color: #333;
+  scroll-behavior: smooth;
 }
-
-header {
-  background-color: #222;
-  padding: 10px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  list-style: none;
-}
-
-nav ul li a {
-  color: white;
+a {
+  color: #0077cc;
   text-decoration: none;
-  font-weight: bold;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
-section {
+/* Header */
+header {
+  background: linear-gradient(to right, #1c1c1c, #2d2d2d);
+  color: #fff;
+  text-align: center;
   padding: 60px 20px;
+}
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
+header nav a {
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+/* Sections */
+.section {
+  padding: 50px 0;
+}
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+.skill {
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-.hero {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: white;
-  padding-top: 100px;
-}
-
-.profile-img {
-  width: 150px;
-  border-radius: 50%;
+/* Projects */
+.project-card {
+  background: #fff;
+  padding: 20px;
   margin-bottom: 20px;
-  border: 5px solid white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.typing-text {
-  color: #00ffc3;
-  font-weight: bold;
+/* Contact */
+#contact a {
+  display: inline-block;
+  margin: 5px 0;
 }
 
-.social-icons {
-  margin-top: 15px;
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
 }
 
-.social-icons a {
-  color: white;
-  margin: 0 10px;
-  font-size: 1.5rem;
-  transition: 0.3s ease;
+/* Animations */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+.slide-up {
+  animation: slideUp 1s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.social-icons a:hover {
-  color: #00ffc3;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-.projects li, .experience li {
-  background-color: white;
-  padding: 15px;
-  margin: 10px auto;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-@media screen and (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .profile-img {
-    width: 100px;
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
   }
 }
