@@ -3,69 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sarmad Umer | Portfolio</title>
+  <title>Sarmad Umer - AI Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
   <header>
-    <h1>Sarmad Umer</h1>
-    <p>Full Stack Developer | AI Enthusiast | Data Analyst</p>
     <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a passionate Computer Science student at FAST-NUCES with experience in MERN stack, Generative AI, and data analysis. I love building impactful digital solutions using modern web and AI tools.</p>
+  <section id="hero" class="hero" data-aos="fade-up">
+    <img src="sarmad.jpg" alt="Sarmad Umer" class="profile-img"/>
+    <h1>I am <span class="typing-text"></span></h1>
+    <div class="social-icons">
+      <a href="https://github.com/yourgithub" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
   </section>
 
-  <section id="skills">
+  <section id="about" class="about" data-aos="fade-right">
+    <h2>About Me</h2>
+    <p>I am Sarmad Umer, a passionate AI/ML and Web Developer with hands-on experience in modern technologies.</p>
+  </section>
+
+  <section id="skills" class="skills" data-aos="fade-left">
     <h2>Skills</h2>
     <ul>
-      <li><strong>Languages:</strong> C, C++, Python, JavaScript</li>
-      <li><strong>Frontend:</strong> React.js, Angular</li>
-      <li><strong>Backend:</strong> Node.js, Express.js</li>
-      <li><strong>Databases:</strong> MongoDB, MySQL</li>
-      <li><strong>AI/ML:</strong> scikit-learn, Hugging Face, OpenAI, Whisper</li>
-      <li><strong>Tools:</strong> Git, GitHub, Power BI, Postman, VS Code</li>
+      <li>Python, JavaScript, C++</li>
+      <li>Machine Learning, Deep Learning</li>
+      <li>React.js, Node.js, Express.js</li>
+      <li>MongoDB, MySQL</li>
     </ul>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="projects" data-aos="zoom-in">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>YouTube Video Summarizer (Generative AI)</h3>
-      <p>Auto-summarizes YouTube videos using Whisper, Hugging Face, and RAG pipelines.</p>
-    </div>
-    <div class="project">
-      <h3>E-Commerce Website</h3>
-      <p>Built with MERN/MEAN stack. Features user auth, secure checkout, token APIs.</p>
-    </div>
-    <div class="project">
-      <h3>Health Prediction App</h3>
-      <p>ML-powered web app predicting health status with a dynamic React frontend.</p>
-    </div>
-    <div class="project">
-      <h3>Hospital Management System</h3>
-      <p>C++ and MySQL project for managing patients, doctors, and appointments.</p>
-    </div>
+    <ul>
+      <li>Diabetes & Heart Disease Prediction Web App</li>
+      <li>Flight Booking System with Weather API</li>
+      <li>Real-Time Video Translation App</li>
+    </ul>
   </section>
 
-  <section id="contact">
+  <section id="experience" class="experience" data-aos="fade-up">
+    <h2>Experience</h2>
+    <ul>
+      <li>Intern at SDGS Academy Pakistan – AI & Environment</li>
+      <li>Security Experts Pvt Ltd – Cybersecurity Intern</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact" data-aos="fade-down">
     <h2>Contact Me</h2>
-    <p><strong>Email:</strong> <a href="mailto:sarmadumer92@gmail.com">sarmadumer92@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/sarmad-umer-a81539251" target="_blank">Sarmad Umer</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/sarmadumer" target="_blank">sarmadumer</a></p>
+    <p>Email: sarmad@example.com</p>
+    <p>Phone: +92 300 1234567</p>
+    <div class="social-icons">
+      <a href="https://github.com/yourgithub" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Sarmad Umer | All rights reserved</p>
-  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
 
-  <script src="script.js"></script>
+    const texts = ["an AI Developer.", "a MERN Stack Developer.", "a Tech Enthusiast."];
+    let count = 0;
+    let index = 0;
+    let currentText = '';
+    let letter = '';
+    (function type() {
+      if (count === texts.length) count = 0;
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+      document.querySelector('.typing-text').textContent = letter;
+      if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+        setTimeout(type, 1000);
+      } else {
+        setTimeout(type, 100);
+      }
+    })();
+  </script>
 </body>
 </html>
