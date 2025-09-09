@@ -50,7 +50,6 @@
             <div class="space-x-4">
                 <a href="#contact" class="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition">Get in Touch</a>
                 <a href="New_Updated_resume.pdf" target="_blank" class="bg-teal-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-600 transition">View Resume</a>
-
             </div>
         </div>
     </section>
@@ -110,6 +109,30 @@
                     <i class="fab fa-docker text-4xl text-teal-400 mb-2"></i>
                     <p class="text-sm">Docker</p>
                 </div>
+                <div class="bg-gray-800 p-5 rounded-lg shadow-md text-center hover:bg-teal-800 transition animate-fadeInUp delay-1100">
+                    <i class="fas fa-brain text-4xl text-teal-400 mb-2"></i>
+                    <p class="text-sm">EEG Signal Processing</p>
+                </div>
+                <div class="bg-gray-800 p-5 rounded-lg shadow-md text-center hover:bg-teal-800 transition animate-fadeInUp delay-1200">
+                    <i class="fas fa-search text-4xl text-teal-400 mb-2"></i>
+                    <p class="text-sm">RAG</p>
+                </div>
+                <div class="bg-gray-800 p-5 rounded-lg shadow-md text-center hover:bg-teal-800 transition animate-fadeInUp delay-1300">
+                    <i class="fas fa-robot text-4xl text-teal-400 mb-2"></i>
+                    <p class="text-sm">Transformers</p>
+                </div>
+                <div class="bg-gray-800 p-5 rounded-lg shadow-md text-center hover:bg-teal-800 transition animate-fadeInUp delay-1400">
+                    <i class="fas fa-cogs text-4xl text-teal-400 mb-2"></i>
+                    <p class="text-sm">LoRA & QLoRA</p>
+                </div>
+                <div class="bg-gray-800 p-5 rounded-lg shadow-md text-center hover:bg-teal-800 transition animate-fadeInUp delay-1500">
+                    <i class="fas fa-edit text-4xl text-teal-400 mb-2"></i>
+                    <p class="text-sm">LLM Fine Tuning</p>
+                </div>
+                <div class="bg-gray-800 p-5 rounded-lg shadow-md text-center hover:bg-teal-800 transition animate-fadeInUp delay-1600">
+                    <i class="fas fa-link text-4xl text-teal-400 mb-2"></i>
+                    <p class="text-sm">LangChain</p>
+                </div>
             </div>
         </div>
     </section>
@@ -152,6 +175,27 @@
                         <h3 class="text-xl font-semibold mb-2">Hospital Management System</h3>
                         <p class="text-gray-300 mb-4">Built a patient and doctor record management system with database integration and admin features.</p>
                         <a href="https://github.com/sarmadumer/Hospital_Management_syetem" target="_blank" class="text-orange-500 hover:underline">View Project</a>
+                    </div>
+                </div>
+                <div class="bg-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition animate-fadeInUp delay-600">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">EEG Brain Signal Game</h3>
+                        <p class="text-gray-300 mb-4">Developed a final year project that enables playing a game using EEG brain signals, leveraging brain-computer interface technology for interactive gameplay.</p>
+                        <a href="#" class="text-orange-500 hover:underline">View Project</a>
+                    </div>
+                </div>
+                <div class="bg-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition animate-fadeInUp delay-700">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">AI-Powered Tourist Attraction Finder</h3>
+                        <p class="text-gray-300 mb-4">Built an intelligent tourist guide app using React.js, Node.js, and AI21 GPT API to explore famous attractions with AI-generated insights.</p>
+                        <a href="https://github.com/sarmadumer/AI-Travel-Tourist-Guide" target="_blank" class="text-orange-500 hover:underline">View Project</a>
+                    </div>
+                </div>
+                <div class="bg-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition animate-fadeInUp delay-800">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">AI-Powered Translation App</h3>
+                        <p class="text-gray-300 mb-4">Created a full-stack translation app using Flask and AI21's Jamba-mini model, supporting multiple languages with tone-aware translations and speech synthesis.</p>
+                        <a href="https://github.com/sarmadumer/Translation-App-With-Ai" target="_blank" class="text-orange-500 hover:underline">View Project</a>
                     </div>
                 </div>
             </div>
@@ -253,7 +297,7 @@
         document.getElementById('viewResume').addEventListener('click', function(e) {
             e.preventDefault();
             const link = document.createElement('a');
-            link.href = 'New_Updated_resume.pdf'; // Ensure this file is in the repository
+            link.href = 'New_Updated_resume.pdf';
             link.download = 'New_Updated_resume.pdf';
             document.body.appendChild(link);
             link.click();
@@ -263,7 +307,7 @@
         document.getElementById('downloadResume').addEventListener('click', function(e) {
             e.preventDefault();
             const link = document.createElement('a');
-            link.href = 'New_Updated_resume.pdf'; // Ensure this file is in the repository
+            link.href = 'New_Updated_resume.pdf';
             link.download = 'New_Updated_resume.pdf';
             document.body.appendChild(link);
             link.click();
